@@ -1,0 +1,128 @@
+o
+Input your file path:
+If you want to use relative path,
+please put your file in the same level as bin and src.
+inputTest.txt
+p
+Print lines from: (line index start from 0)
+0
+To:
+10
+[9a040 ADD $20 $25 $11]
+[9a044 LW $9, 20 ($7)]
+[9a048 Beq $21 $9 9a058]
+[9a04c SUB $21 $17 $13]
+[9a050 SW $19 32 $13]
+[9a054 AND $15 $19 $9]
+[9a058 SW $15 -12 $20]
+[9a05c ADD $12 $12 $12]
+[9a060 OR $21 $21 $4]
+[9a064 Bne $12 $15 9a044]
+[9a068 LW $13, -16 ($22)]
+f
+Input the word you want to find:
+LW
+9a044 LW $9, 20 ($7)
+9a068 LW $13, -16 ($22)
+r
+Which line you want to replace? (line index start from 0)
+2
+Word you want to replace:
+Beq
+Type new word to replace the old one:
+replace
+9a048 replace $21 $9 9a058
+p
+Print lines from: (line index start from 0)
+0
+To:
+10
+[9a040 ADD $20 $25 $11]
+[9a044 LW $9, 20 ($7)]
+[9a048 replace $21 $9 9a058]
+[9a04c SUB $21 $17 $13]
+[9a050 SW $19 32 $13]
+[9a054 AND $15 $19 $9]
+[9a058 SW $15 -12 $20]
+[9a05c ADD $12 $12 $12]
+[9a060 OR $21 $21 $4]
+[9a064 Bne $12 $15 9a044]
+[9a068 LW $13, -16 ($22)]
+A
+Which line you want to insert after? (line index start from 0)
+2
+Text you want to insert:
+insert after
+p
+Print lines from: (line index start from 0)
+0
+To:
+11
+[9a040 ADD $20 $25 $11]
+[9a044 LW $9, 20 ($7)]
+[9a048 replace $21 $9 9a058]
+[insert after]
+[9a04c SUB $21 $17 $13]
+[9a050 SW $19 32 $13]
+[9a054 AND $15 $19 $9]
+[9a058 SW $15 -12 $20]
+[9a05c ADD $12 $12 $12]
+[9a060 OR $21 $21 $4]
+[9a064 Bne $12 $15 9a044]
+[9a068 LW $13, -16 ($22)]
+I
+Which line you want to insert before? (line index start from 0)
+10
+Text you want to insert:
+insert before
+p
+Print lines from: (line index start from 0)
+0
+To:
+12
+[9a040 ADD $20 $25 $11]
+[9a044 LW $9, 20 ($7)]
+[9a048 replace $21 $9 9a058]
+[insert after]
+[9a04c SUB $21 $17 $13]
+[9a050 SW $19 32 $13]
+[9a054 AND $15 $19 $9]
+[9a058 SW $15 -12 $20]
+[9a05c ADD $12 $12 $12]
+[9a060 OR $21 $21 $4]
+[insert before]
+[9a064 Bne $12 $15 9a044]
+[9a068 LW $13, -16 ($22)]
+d
+Line you want to delete from:? (line index start from 0)
+4
+Line you want to delete to:
+6
+p
+Print lines from: (line index start from 0)
+0
+To:
+12
+[9a040 ADD $20 $25 $11]
+[9a044 LW $9, 20 ($7)]
+[9a048 replace $21 $9 9a058]
+[insert after]
+[9a058 SW $15 -12 $20]
+[9a05c ADD $12 $12 $12]
+[9a060 OR $21 $21 $4]
+[insert before]
+[9a064 Bne $12 $15 9a044]
+[9a068 LW $13, -16 ($22)]
+Your input is out of Range. This is the whole list.
+q
+Please input a command:
+File not save yet. If you still want to quit. Input QQ
+If not, type any character to escape Q command
+
+And input command you want: 
+s
+Input your file path: 
+(If you want to writeback to original read in file, press Enter.)
+output1.txt
+q
+ByeBye.

@@ -1,0 +1,10 @@
+9a040 ADD $20 $25 $11
+9a044 LW $9, 20 ($7)
+9a048 replace $21 $9 9a058
+insert after
+9a058 SW $15 -12 $20
+9a05c ADD $12 $12 $12
+9a060 OR $21 $21 $4
+insert before
+9a064 Bne $12 $15 9a044
+9a068 LW $13, -16 ($22)

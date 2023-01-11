@@ -1,0 +1,217 @@
+class Node{
+    string text each line;
+    Node point to right;
+    Node point to left
+}
+
+Class DoubleLinkedList{
+    public Node first;
+    public Node last;
+    public int size;
+
+    public boolean is Empty(){
+        return first == null;
+    }
+
+//command O
+    public void open(string filepath){
+        bufferreader read;
+        while (until null){
+            read.readline();
+            connect to linkedlist one after one;
+        }
+    }
+//command S
+    public void save(String filepath){
+        bufferwriter write;
+        while (until null){
+            write in to filepath one after one;
+            
+        }
+    }
+//command P
+    public void print(fromline, toline){
+        Node first;
+        for (i = fromline ; i <= toline){
+            System.out.println(first.rnext);
+        }
+    }
+//command F
+    public void find(String text_want_to_found);
+    Node current;
+    for (i=0; i<size-1;i++){
+        current = current.rnext
+        if (current.contain(text_want_to_found)){
+            System.out.println(current.text)
+        }
+    }
+
+//command R
+    public void replace(int line,String old,String new){
+        Node current = first;
+        for (i = 0;i<line; i++){
+            current = current.rnext;
+        }
+        current.text.replace(old, new);
+
+    }
+
+}
+
+//command A
+    public void insertA(line, Node){
+        Node before = first;
+        for(i=0;i<line;i++){
+            before = before.rnext;
+        }
+        Node next = before.rnext;
+        newN.rnext = next;
+        newN.lnext = before;
+        
+        before.rnext = newN;
+        next.lnext = newN;
+    }
+
+//command I
+    public void insertI(line, Node){
+        Node before = first;
+        
+        for (int i = 0; i < index-1; i++) {
+            before = before.rnext;
+        }
+        Node next = before.rnext;
+        newN.rnext = next;
+        newN.lnext = before;
+        
+        before.rnext = newN;
+        next.lnext = newN;
+}
+
+//command D
+    public void delete(fromline, toline){
+        Node current = first;
+        Node current2 = first;
+        Node beforecurrent = null;
+        Node aftercurrent = null;
+        for (int i = 0; i < fromline; i++) {
+            current = current.rnext;
+            beforecurrent = current.lnext;
+        }
+        for (int i = 0; i < toline; i++) {
+            current2 = current2.rnext;
+            aftercurrent = current2.rnext;
+        }
+        
+        beforecurrent.rnext = aftercurrent;
+        aftercurrent.lnext = beforecurrent;
+        for (int i = findex; i < lindex; i++) {
+            current.rnext = null;
+            current.lnext = null;
+            current2.rnext = null;
+            current2.lnext = null;
+            }
+        }
+    }
+
+class main{
+    done = false;
+    edit = false
+    while(!done){
+        String input()
+
+        switch(input){
+            case"Q":
+
+            	if (edit = true && saved != true) {
+
+					String quitOrStay = input.nextLine();
+
+					if (quitOrStay.equals("QQ")) {
+						done = true;
+						break;
+					}else {
+						System.out.println("input command you want: ");
+						break;
+					}
+				}else {
+					System.out.println("ByeBye.");
+					done = true;
+					break;
+				}
+
+            case "O":
+                filename = input();
+                open(filename);
+
+            case "S":
+                	if (filename == null) {
+
+					newfilename = input();
+					System.out.println(newfilename);
+					read(newfilename);
+					filename = newfilename;
+					break;
+					
+				}
+				System.out.println("Input your file path: ");
+				System.out.println("(If you want to writeback to original read in file, press Enter.)");
+				String savepath = input.nextLine();
+				if (savepath.equals("") && filename!=null) {
+					savepath = filename;
+					save(savepath);
+					saved = true;
+					break;
+				}else {
+					
+						save(savepath);
+						saved = true;
+                        break;
+				}
+                
+            case "P":
+                from = input();
+                to = input();
+                print(from, to);
+                break;
+
+            case "F":
+                word = input();
+                find(word);
+                break;
+            
+            case "R":
+                line = input();
+                old = input();
+                new = input();
+                replace(line, old, new);
+                break;
+
+            case "A":
+                line = input();
+                text = input();
+                insertA(line, text);
+                break;
+
+            case "I":
+                line = input();
+                text = input();
+                insertI(line, text);
+                break;
+            
+            case "D":
+                fromline = input();
+                toline = input();
+                delete(fromline, toline);
+                break;
+
+            default:
+                print("wrong input");
+                break;
+
+
+
+
+
+        }
+    }
+}
